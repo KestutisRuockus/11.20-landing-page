@@ -245,21 +245,26 @@ ul li {
   gap: 2rem;
 }
 
+.arrow-testimonial:hover,
 .arrows a:hover {
   background-color: #5d50c6;
   border-color: #5d50c6;
+  cursor: pointer;
 }
 
+.arrow-testimonial:hover svg,
 .arrows a:hover svg {
   fill: white;
 }
 
-.arrows svg {
+.arrows svg,
+.arrow-testimonial svg {
   fill: #191825;
   transition: all 0.5s ease;
 }
 
-.arrows a {
+.arrows a,
+.arrow-testimonial {
   display: flex;
   width: 100px;
   height: 100px;
@@ -396,8 +401,8 @@ footer .footer-links a:hover {
   font-family: "Inter";
   font-size: 18px;
   color: rgb(25, 24, 37, 0.5);
-  margin: 1.5rem 0 3rem;
   line-height: 160%;
+  margin-bottom: -6px;
 }
 
 .features .left {
@@ -412,6 +417,47 @@ footer .footer-links a:hover {
 .features .feature img {
   width: 100px;
   height: 100px;
+}
+
+.testimonials img {
+  width: 128px;
+  height: 128px;
+}
+
+.testimonials .rating img {
+  width: 32px;
+  height: 32px;
+}
+
+.testimonials .author {
+  color: rgb(25, 24, 37, 0.5);
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.testimonials span {
+  color: #ff5722;
+  font-weight: bold;
+}
+
+.testimonials .comment {
+  font-size: 23px;
+  line-height: 160%;
+  font-family: "CircularSTD";
+  font-weight: 300;
+  color: rgb(25, 24, 37, 0.5);
+}
+
+.testimonials input {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  -webkit-appearance: none;
+  background-color: rgb(25, 24, 37, 0.05);
+}
+
+.testimonials input:checked {
+  background-color: #f85e9f;
 }
 
 /* media queries */
@@ -456,52 +502,65 @@ footer .footer-links a:hover {
   input[name="nav-toggler"]:checked + nav::after {
     left: 280px;
   }
+  
+  /* .testimonials .content {
+    order: 1;
+  }
+
+  .testimonials .left {
+    order: 2;
+  }
+  .testimonials .right {
+    order: 3;
+  } */
 }
 
-@media screen and (max-width: 768px) {
-  .home h2 {
-    font-size: 40px;
+  @media screen and (max-width: 768px) {
+    .home h2 {
+      font-size: 40px;
+    }
+
+    section.home .decoration::before {
+      display: none;
+    }
+
   }
 
-  section.home .decoration::before {
-    display: none;
-  }
-}
+  @media screen and (min-width: 1400px) {
+    .p-custom {
+      padding-left: 144px;
+    }
 
-@media screen and (min-width: 1400px) {
-  .p-custom {
-    padding-left: 144px;
-  }
-
-  .container-lg {
-    max-width: 1184px;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  .section-heading h2 {
-    font-size: 40px;
-  }
-  .travel .image {
-    height: 679px;
-    background-size: cover;
+    .container-lg {
+      max-width: 1184px;
+    }
   }
 
-  .travel .image::before {
-    display: none;
-  }
-}
+  @media screen and (max-width: 1200px) {
+    .section-heading h2 {
+      font-size: 40px;
+    }
+    .travel .image {
+      height: 679px;
+      background-size: cover;
+    }
 
-@media screen and (max-width: 768px) {
-  .section-heading h2 {
-    font-size: 32px;
+    .travel .image::before {
+      display: none;
+    }
   }
 
-  .section-heading h3 {
-    font-size: 16px;
-  }
+  @media screen and (max-width: 768px) {
+    .section-heading h2 {
+      font-size: 32px;
+    }
 
-  .travel .image {
-    height: 320px;
+    .section-heading h3 {
+      font-size: 16px;
+    }
+
+    .travel .image {
+      height: 320px;
+    }
   }
 }
