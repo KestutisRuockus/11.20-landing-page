@@ -171,9 +171,247 @@ ul li {
   margin: 1rem 0 0;
 }
 
+.service {
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+  border: 1px solid rgb(204, 204, 204);
+}
+
+.service:hover {
+  box-shadow: 0 0 25px 0 rgb(0, 0, 0, 0.1);
+  border-color: #eeeeee;
+}
+
+.service h3 {
+  font-size: 600;
+  font-weight: 28px;
+}
+.service p {
+  font-family: "Inter";
+  color: #1918257e;
+  font-size: 18px;
+}
+
 .services img {
   width: 64px;
   height: 64px;
+}
+
+.destination {
+  background-color: white;
+  box-shadow: 0 0 25px 0 rgb(0, 0, 0, 0.1);
+}
+
+.destination h3 {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.destination .price {
+  font-size: 23px;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.destination .location {
+  color: rgb(25, 24, 37, 0.752);
+  font-family: "Inter";
+  font-size: 18px;
+  margin-top: 0.5rem;
+}
+
+.destination .rating {
+  color: #ff2722;
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.destination .rating::after {
+  content: "";
+  background: url(/assets/icons/star.svg);
+  width: 24px;
+  height: 24px;
+  display: block;
+  margin-top: -4px;
+  gap: 8px;
+}
+
+.arrows {
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
+}
+
+.arrows a:hover {
+  background-color: #5d50c6;
+  border-color: #5d50c6;
+}
+
+.arrows a:hover svg {
+  fill: white;
+}
+
+.arrows svg {
+  fill: #191825;
+  transition: all 0.5s ease;
+}
+
+.arrows a {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgb(204, 204, 204);
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+.travel p {
+  font-family: "Inter";
+  font-size: 18px;
+  color: rgb(25, 24, 37, 0.5);
+  margin: 1.5rem 0 3rem;
+}
+
+.travel .feature {
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 25px;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.feature h3 {
+  color: #ff5722;
+  font-size: 35px;
+  font-weight: bold;
+  margin: 0 0 0.7rem;
+}
+
+.feature span {
+  color: #191825;
+  font-family: "Inter";
+  font-size: 18px;
+}
+
+.travel .image {
+  background: url(/assets/images/discount.png) no-repeat 70% 0;
+  height: 100%;
+  position: relative;
+}
+
+.travel .image::before {
+  content: "";
+  background-color: #facd49;
+  display: block;
+  height: 550px;
+  width: 1000%;
+  position: absolute;
+  top: 129px;
+  left: -1000%;
+}
+
+footer {
+  padding-bottom: 2rem;
+}
+
+footer ul {
+  padding: 0;
+}
+
+footer .logo img {
+  width: 142px;
+  height: 40px;
+}
+
+footer p {
+  color: rgb(25, 24, 37, 0.5);
+  font-family: "CircularSTD";
+  font-size: 23px;
+  margin: 2rem 0 3rem;
+}
+
+footer .social ul {
+  display: flex;
+  gap: 30px;
+}
+
+footer .social a {
+  background-color: #5d50c6;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+footer .social a svg {
+  fill: white;
+}
+
+footer h3 {
+  font-weight: bold;
+  font-size: 23px;
+}
+
+footer .footer-links li,
+footer .footer-links a {
+  font-size: 18px;
+  font-family: "Inter";
+  color: #191825c7;
+  text-decoration: none;
+}
+
+footer .footer-links li {
+  padding: 0.8rem 0;
+}
+
+footer .footer-links a:hover {
+  text-decoration: underline;
+}
+
+.features .section-heading {
+  height: 25%;
+}
+
+.features .section-heading p {
+  font-family: "Inter";
+  font-size: 18px;
+  color: rgb(25, 24, 37, 0.5);
+  margin: 1.5rem 0 3rem;
+  line-height: 160%;
+}
+
+.feature h2 {
+  font-size: 23px;
+  line-height: 120%;
+  font-weight: bold;
+}
+
+.feature p {
+  font-family: "Inter";
+  font-size: 18px;
+  color: rgb(25, 24, 37, 0.5);
+  margin: 1.5rem 0 3rem;
+  line-height: 160%;
+}
+
+.features .left {
+  height: 100%;
+}
+
+.features .image img {
+  height: 100%;
+  width: 100%;
+}
+
+.features .feature img {
+  width: 100px;
+  height: 100px;
 }
 
 /* media queries */
@@ -232,13 +470,25 @@ ul li {
 
 @media screen and (min-width: 1400px) {
   .p-custom {
-    padding-left: 98px;
+    padding-left: 144px;
+  }
+
+  .container-lg {
+    max-width: 1184px;
   }
 }
 
 @media screen and (max-width: 1200px) {
   .section-heading h2 {
     font-size: 40px;
+  }
+  .travel .image {
+    height: 679px;
+    background-size: cover;
+  }
+
+  .travel .image::before {
+    display: none;
   }
 }
 
@@ -249,5 +499,9 @@ ul li {
 
   .section-heading h3 {
     font-size: 16px;
+  }
+
+  .travel .image {
+    height: 320px;
   }
 }
